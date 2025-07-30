@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/30 18:46:27 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/07/30 18:46:34 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)
@@ -23,8 +35,6 @@ int	ft_atoi(const char *nptr)
 	}
 	return (n * sign);
 }
-
-#include <stdio.h>
 
 int	main(void)
 {

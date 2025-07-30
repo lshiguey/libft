@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:10:29 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/11 12:52:43 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/07/30 20:04:26 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/07/30 20:04:31 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
 	return (c >= ' ' && c <= '~');
 }
 
-/*
-#include <stdio.h>
 int	main(void)
 {
-	printf("\\0 retorna %i\n", ft_isprint('\0')); // 0
-        printf("\\n retorna %i\n", ft_isprint('\n')); // 0
-        printf("4 retorna %i\n", ft_isprint('4')); // 1
-        printf("\\t retorna %i\n", ft_isprint('\t')); // 0
-        printf("59872 retorna %i\n", ft_isprint(59872)); // 0
-        printf("-65 retorna %i\n", ft_isprint(-65)); // 0
-        printf("@ retorna %i\n", ft_isprint('@')); // 1
+	printf("0 - false / 1 - true");
+	printf("L retorna %i\n", ft_isprint('L'));
+	printf("& retorna %i\n", ft_isprint('&'));
+	printf("@ retorna %i\n", ft_isprint('@'));
+	printf("n retorna %i\n", ft_isprint('n'));
+	printf(") retorna %i\n", ft_isprint(')'));
+	printf("r retorna %i\n", ft_isprint('r'));
+	printf("0 retorna %i\n", ft_isprint('0'));
 	return (0);
 }
-*/

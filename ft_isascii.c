@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:14:04 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/11 12:52:18 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/07/30 20:02:19 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/07/30 20:04:15 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
 
-/*
-#include <stdio.h>
 int	main(void)
 {
-	printf("c retorna %i\n", ft_isascii('c')); // 1
-	printf("H retorna %i\n", ft_isascii('H')); // 1
-	printf("4 retorna %i\n", ft_isascii('4')); // 1
-	printf("_ retorna %i\n", ft_isascii('_')); // 1
-	printf("59872 retorna %i\n", ft_isascii(59872)); // 0
-	printf("-65 retorna %i\n", ft_isascii(-65)); // 0
-	printf("65 retorna %i\n", ft_isascii(65)); // 1
+	printf("0 - false / 1 - true");
+	printf("L retorna %i\n", ft_isascii('L'));
+	printf("& retorna %i\n", ft_isascii('&'));
+	printf("@ retorna %i\n", ft_isascii('@'));
+	printf("n retorna %i\n", ft_isascii('n'));
+	printf(") retorna %i\n", ft_isascii(')'));
+	printf("r retorna %i\n", ft_isascii('r'));
+	printf("0 retorna %i\n", ft_isascii('0'));
 	return (0);
 }
-*/

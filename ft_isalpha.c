@@ -3,27 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:13:51 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 15:32:13 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/07/30 19:58:07 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/07/30 20:10:33 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
-/*
-#include <stdio.h>
 int	main(void)
 {
-	printf("c retorna %i\n", ft_isalpha('c')); // 1
-	printf("H retorna %i\n", ft_isalpha('H')); // 1
-	printf("4 retorna %i\n", ft_isalpha('4')); // 0
-	printf("_ retorna %i\n", ft_isalpha('_')); // 0
-	printf("Y retorna %i\n", ft_isalpha('Y')); // 1
+	printf("0 - false / 1 - true");
+	printf("L retorna %i\n", ft_isalpha('L'));
+	printf("& retorna %i\n", ft_isalpha('&'));
+	printf("@ retorna %i\n", ft_isalpha('@'));
+	printf("n retorna %i\n", ft_isalpha('n'));
+	printf(") retorna %i\n", ft_isalpha(')'));
+	printf("r retorna %i\n", ft_isalpha('r'));
+	printf("0 retorna %i\n", ft_isalpha('0'));
 	return (0);
 }
-*/
