@@ -5,53 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/30 18:46:27 by lshiguey          #+#    #+#             */
-/*   Updated: 2025/07/30 18:46:34 by lshiguey         ###   ########.fr       */
+/*   Created: 2025/08/12 14:21:47 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:57:55 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *valor)
 {
-	int	n;
-	int	sign;
+	int	index;
+	int	sinal;
 
-	n = 0;
-	sign = 1;
-	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	index = 0;
+	sinal = 1;
+	while ((*valor >= '\t' && *valor <= '\r') || *valor == ' ')
+		valor++;
+	if (*valor == '-' || *valor == '+')
 	{
-		if (*nptr == '-')
-			sign = -1;
-		nptr++;
+		if (*valor == '-')
+			sinal = -1;
+		valor++;
 	}
-	while (ft_isdigit(*nptr))
+	while (ft_isdigit(*valor))
 	{
-		n *= 10;
-		n += *nptr - '0';
-		nptr++;
+		index *= 10;
+		index += *valor - '0';
+		valor++;
 	}
-	return (n * sign);
-}
-
-int	main(void)
-{
-	printf("\"457\" returns %i\n", ft_atoi("457")); // 457
-	printf("\"-42\" returns %i\n", ft_atoi("-42")); // -42
-	printf("\"0\" returns %i\n", ft_atoi("0")); // 0
-	printf("\"+50\" returns %i\n", ft_atoi("+50")); // 50
-	printf("\"++50\" returns %i\n", ft_atoi("++50")); // 0
-	printf("\"--42\" returns %i\n", ft_atoi("--42")); // 0
-	printf("\"-+42\" returns %i\n", ft_atoi("-+42")); // 0
-	printf("\"a42\" returns %i\n", ft_atoi("a42")); // 0
-	printf("\"       42\" returns %i\n",
-			ft_atoi("       42")); // 42
-	printf("\"-2147483648\" returns %i\n",
-			ft_atoi("-2147483648")); // -2147483648
-	printf("\"2147483647\" returns %i\n",
-			ft_atoi("2147483647")); // 2147483647
-
-	return (0);
+	return (index * sinal);
 }

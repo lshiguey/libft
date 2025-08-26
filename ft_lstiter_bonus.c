@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:36:14 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:22:44 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -11,34 +22,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-
-/*
-void	lstiter_tester(void *content)
-{
-	char	*temp;
-
-	temp = (char *)content;
-	*temp = ft_toupper(*temp);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	t_list	*lst;
-	t_list	*node_2;
-	t_list	*node_3;
-	char    str_1[] = "a";
-	char    str_2[] = "b";
-	char    str_3[] = "c";
-
-	printf("Antes: %s, %s e %s\n", str_1, str_2, str_3);
-	lst = ft_lstnew(str_1);
-	node_2 = ft_lstnew(str_2);
-	ft_lstadd_back(&lst, node_2);
-	node_3 = ft_lstnew(str_3);
-	ft_lstadd_back(&lst, node_3);
-	ft_lstiter(lst, lstiter_tester);
-	printf("Depois: %s, %s e %s\n", str_1, str_2, str_3);
-	return (0);
-}
-*/

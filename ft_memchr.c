@@ -1,31 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/09 19:15:32 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:56:28 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *ponteiro, int valor, size_t tamanho)
 {
-	size_t			i;
+	size_t			index;
 	unsigned char	*temp;
 
-	i = 0;
-	temp = (unsigned char *)s;
-	while (i < n)
+	index = 0;
+	temp = (unsigned char *)ponteiro;
+	while (index < tamanho)
 	{
-		if (temp[i] == (unsigned char)c)
-			return (temp + i);
-		i++;
+		if (temp[index] == (unsigned char)valor)
+			return (temp + index);
+		index++;
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	dest[] = {0, -8, 65, 4, 7};
-	int	*found;
-
-	found = (int *)ft_memchr(dest, 'A', sizeof(int) * 5);
-	printf("Valor encontrado na memória: %i\n", *found);
-	return (0);
-}
-*/

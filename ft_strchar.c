@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/30 20:01:06 by lshiguey          #+#    #+#             */
-/*   Updated: 2025/08/25 21:56:15 by lshiguey         ###   ########.fr       */
+/*   Created: 2025/08/09 18:33:18 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:56:41 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int valor)
+char	*ft_strchr(const char *valor, int busca)
 {
-	return (ft_isalpha(valor) || ft_isdigit(valor));
+	while (*valor && *valor != (unsigned char)busca)
+		valor++;
+	if (*valor == (unsigned char)busca)
+		return ((char *)valor);
+	return (NULL);
 }

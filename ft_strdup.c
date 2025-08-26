@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:34:25 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:00:30 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -18,19 +29,3 @@ char	*ft_strdup(const char *s)
 	dup[i] = '\0';
 	return (dup);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	str[] = "strdup example";
-	printf("string address: %p\n", str);
-	printf("duplicated string address: %p\n", ft_strdup(str));
-	printf("duplicated string value: \"%s\"\n", ft_strdup(str));
-	printf("\n\n");
-	char str2[] = "";
-	printf("string address: %p\n", str);
-	printf("duplicated string address: %p\n", ft_strdup(str2));
-	printf("duplicated string value: \"%s\"\n", ft_strdup(str2));
-}
-*/

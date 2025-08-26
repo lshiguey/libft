@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:37:04 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:21:34 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -23,18 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	write_number(long_n, fd);
 }
-
-/*
-#include <fcntl.h>
-int	main(void)
-{
-	int	fd;
-
-	fd = open("testfile.txt", O_WRONLY);
-	ft_putnbr_fd(-2147483648, fd);
-	ft_putnbr_fd(0, fd);
-	ft_putnbr_fd(2147483647, fd);
-	close(fd);
-	return (0);
-}
-*/

@@ -3,40 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:11:44 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 12:39:58 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/08/09 18:49:01 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:56:52 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *valor, int busca)
 {
-	int	i;
+	int	index;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	index = ft_strlen(valor);
+	while (index >= 0)
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i--;
+		if (valor[index] == (unsigned char)busca)
+			return ((char *)&valor[index]);
+		index--;
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%s\n", ft_strrchr("bonjour", 'b')); // bonjour
-	printf("%s\n", ft_strrchr("ABCABC", 'B')); // BC
-	printf("%s\n", ft_strrchr("ABCABC", 'b')); // (null)
-	printf("%s\n", ft_strrchr("string example", 'e')); // e
-	printf("%s\n", ft_strrchr("", '\0')); // \0
-	printf("%s\n", ft_strrchr("test", '\0')); // \0
-	printf("%s\n", ft_strrchr("\0", '\0')); // \0
-	return (0);
-}
-*/

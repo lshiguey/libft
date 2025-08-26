@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:35:56 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:22:58 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -14,26 +25,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		*lst = temp;
 	}
 }
-
-/*
-static void	del_tester(void *content)
-{
-	ft_bzero(content, ft_strlen((char *)content));
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	t_list	*lst;
-	t_list	*node;
-	char	s1[] = "node 1";
-	char	s2[] = "node 2";
-
-	lst = ft_lstnew(s1);
-	node = ft_lstnew(s2);
-	ft_lstadd_back(&lst, node);
-	printf("Before clear: %s, %s\n", (char *)lst->content, (char *)node->content);
-	ft_lstclear(&lst, del_tester);
-	printf("After clear: %s, %s\n", (char *)lst->content, (char *)node->content);
-}
-*/

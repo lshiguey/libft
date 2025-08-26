@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:16:49 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/31 12:12:21 by lcosta-g         ###   ########.fr       */
+/*   Created: 2024/10/09 13:16:49 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:00:43 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(temp, s2, temp_size);
 	return (temp);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*s1 = "strjoin ";
-	char	*s2 = "example";
-
-	printf("%s\n", ft_strjoin(s1, s2));
-	return (0);
-}
-*/

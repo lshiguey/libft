@@ -1,31 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/09 15:52:23 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:56:30 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *destino, const void *origem, size_t qtd_b)
 {
-	size_t	i;
+	size_t	index;
 
-	i = 0;
-	while (i < n)
+	if (qtd_b == 0 || (!destino && !origem))
+		return (destino);
+	index = 0;
+	while (index < qtd_b)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
+		((unsigned char *)destino)[index] = ((unsigned char *)origem)[index];
+		index++;
 	}
-	return (dest);
+	return (destino);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	mem_dest[12];
-	int	mem_src[12] = {0, 0, 0};
-	int	i;
-
-	ft_memcpy(mem_dest, mem_src, 3 * sizeof(int));
-	i = 0;
-	while (i < 3)
-		printf("%i\n", mem_dest[i++]);
-	return (0);
-}
-*/

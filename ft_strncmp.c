@@ -3,41 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:11:37 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 11:29:40 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/08/09 19:01:20 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:56:51 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *ponteiro1, const char *ponteiro2, size_t qtd_b)
 {
-	size_t	i;
+	size_t	index;
 
-	if (!n)
+	if (!qtd_b)
 		return (0);
-	i = 0;
-	while (s1[i] && s1[i] == s2[i] && i < (n - 1))
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	index = 0;
+	while
+	(
+		ponteiro1[index] &&
+		ponteiro1[index] == ponteiro2[index] &&
+		index < (qtd_b - 1)
+	)
+		index++;
+	return ((unsigned char)ponteiro1[index] - (unsigned char)ponteiro2[index]);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("\"abcde\" and \"abcdz\" with n = 5 returns %i\n",
-		ft_strncmp("abcde", "abcdz", 5)); // -21
-	printf("\"abcde\" and \"abcdz\" with n = 3 returns %i\n",
-		ft_strncmp("abcde", "abcdz", 3)); // 0
-	printf("\"abcdefgh\" and \"abcdwxyz\" with n = 4 returns %i\n",
-		ft_strncmp("abcdefgh", "abcdwxyz", 4));
-	printf("\"abcde\" and \"abcde\" with n = 5 returns %i\n",
-		ft_strncmp("abcde", "abcde", 5)); // 0
-	printf("\"edcba\" and \"abcde\" with n = 100 returns %i\n",
-		ft_strncmp("edcba", "abcde", 100)); // 4
-	return (0);
-}
-*/

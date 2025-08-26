@@ -3,34 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:09:44 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 11:06:56 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/08/06 21:10:25 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:57:05 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *valor)
 {
-	size_t	len;
+	size_t	index;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	index = 0;
+	while (valor[index])
+		index++;
+	return (index);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("Teste retorna %zu\n", ft_strlen("Teste")); // 5
-	printf("São retorna %zu\n", ft_strlen("São")); // 4
-	printf("Açaí retorna %zu\n", ft_strlen("Açaí")); // 6
-	printf("\\0 retorna %zu\n", ft_strlen("\0")); // 0
-	printf("strlen retorna %zu\n", ft_strlen("strlen")); // 6
-	return (0);
-}
-*/

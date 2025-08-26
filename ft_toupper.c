@@ -3,30 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:11:52 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/11 11:17:37 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/08/09 18:15:40 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:56:55 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_toupper(int valor)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= ('a' - 'A');
-	return (c);
+	if (valor >= 'a' && valor <= 'z')
+		valor -= ('a' - 'A');
+	return (valor);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("c retorna %c\n", ft_toupper('C')); // C
-        printf("H retorna %c\n", ft_toupper('H')); // H
-        printf("4 retorna %c\n", ft_toupper('4')); // 4
-        printf("_ retorna %c\n", ft_toupper('_')); // _
-        printf("59872 retorna %c\n", ft_toupper(59872)); // indefinido
-        printf("-65 retorna %c\n", ft_toupper(-65)); // indefinido
-	return (0);
-}
-*/

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:37:15 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:00:11 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -68,27 +79,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split_str(arr, s, c));
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*str;
-	char	**splitted_str;
-	int	i;
-
-	str = "lorem ipsum dolor sit amet,
-		consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-		dignissim sit amet, adipiscing nec, ultricies sed,
-		dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a,
-		semper congue, euismod non, mi.";
-	i = 0;
-	splitted_str = ft_split(str, ' ');
-	if (!splitted_str)
-		return (1);
-	while (splitted_str[i])
-		printf("%s\n", splitted_str[i++]);
-	clean_mem(splitted_str);
-	return (0);
-}
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:16:43 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/31 12:11:56 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/08/12 22:05:02 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:01:21 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*superstr = "this is a super string";
-	char	*substr;
-
-	substr = ft_substr(superstr, 5, 10);
-	printf("Superstring: %s\n", superstr);
-	printf("Substring: %s\n", substr);
-	return (0);
-}
-*/

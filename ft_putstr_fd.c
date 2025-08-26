@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:37:09 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:29:45 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -6,16 +17,3 @@ void	ft_putstr_fd(char *s, int fd)
 	if (s)
 		write(fd, s, ft_strlen(s));
 }
-
-/*
-#include <fcntl.h>
-int	main(void)
-{
-	int	fd;
-
-	fd = open("testfile.txt", O_WRONLY);
-	ft_putstr_fd("ft_pustr_fd example", fd);
-	close(fd);
-	return (0);
-}
-*/

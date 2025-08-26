@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:17:12 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/31 12:11:49 by lcosta-g         ###   ########.fr       */
+/*   Created: 2025/08/12 22:38:04 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 22:01:00 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,22 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	size_t	i;
+	char			*new_str;
+	unsigned int	i;
+	unsigned int	size;
 
-	str = (char *)malloc(ft_strlen(s) + 1);
-	if (!s || !f || !str)
+	if (!s)
+		return (NULL);
+	size = ft_strlen(s);
+	new_str = (char *)malloc(size + 1);
+	if (!new_str)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		str[i] = f(i, s[i]);
+		new_str[i] = f(i, s[i]);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	new_str[i] = '\0';
+	return (new_str);
 }
-
-/*
-static char	strmapi_tester(unsigned int i, char c)
-{
-	return (i + c);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	printf("%s\n", ft_strmapi("teste", &strmapi_tester));
-	return (0);
-}
-*/

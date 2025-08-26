@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 22:35:19 by lshiguey          #+#    #+#             */
+/*   Updated: 2025/08/25 21:57:48 by lshiguey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -45,18 +56,3 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	return (str);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(-42));
-	printf("%s\n", ft_itoa(-9));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(9));
-	printf("%s\n", ft_itoa(42));
-	printf("%s\n", ft_itoa(2147483647));
-	return (0);
-}
-*/
