@@ -2,49 +2,47 @@
 
 # 42's Common Core Libft
 
-- [ft_isalpha](#ft_isalpha) Checks for an alphabetic character; in the standard "C" locale, it is equivalent to (isupper || islower(c)).
-- [ft_isdigit](#ft_isdigit) Checks for a digit (0 through 9).
-- [ft_isalnum](#ft_isalnum) Checks for an alphabetic character; it is equivalent to (isalpha(c) || isdigit(c)).
-- [ft_isascii](#ft_isascii) Checks whether c is a 7-bit unsigned char value that fits into the ASCII character set.
-- [ft_isprint](#ft_isprint) VChecks for any printable character except space.
-- [ft_strlen](#ft_strlen) Function calculates the lenght of the string pointed to by s, excluding the terminating null byte ('\0'). Return value: Function returns the number of bytes in the string pointed to by s.
-- [ft_memset](#ft_memset) Function fills the first n bytes of the memory area pointed to by s, with the constant byte c. 
-Return value: Function returns a pointer to memory area s.
-- [ft_bzero](#ft_bzero) Erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area. Return value: None.
-- [ft_memcpy](#ft_memcpy) Function copies n bytes from memory area src to memory area dest. The memory areas must not overlap. Use memmove if the memory areas do overlap. Return value: Pointer to dest.
-- [ft_memmove](#ft_memmove) Function copies n bytes from memory area src to memory area dest. The memory areas may overlap: copying takes place as though the bytes in src are first copied into a temporary array that does not overlap src or dest, and the bytes are then copied from the temporary array to dest. Return value: Function returns a pointer to dest.
-- [ft_strlcpy](#ft_strlcpy) Function copy strings up to size - 1 characters from the NUL-terminated string src to dst. Guarantee to NUL-terminate the result (as long as size is larger than 0). Note that a byte for the NUL should be included in size. Only operate on true "C" strings. That means that src must be NUL-terminated. Return value: The length of src (size_t).
-- [ft_strlcat](#ft_strlcat) Function appends the NUL-terminated string src to the end of dst. Will append at most size - strlen(dst) - 1 bytes. Guarantee to NUL-terminate the result (as long as size is larger than 0 and as long as there is at least one byte free is dst). Note that a byte for the NUL should be included in size. Only operates on true "C" strings. That means that both src and dst must be NUL-terminated. Return values: For sucessful concatenation: size_t src + dst.
-- [ft_toupper](#ft_toupper) If c is an lowercase letter, returns its uppercase equivalent, if a uppercase representation exists in the current locale. Otherwise returns c.
-- [ft_tolower](#ft_tolower) If c is an uppercase letter, returns its lowercase equivalent, if a lowercase representation exists in the current locale. Otherwise returns c.
-- [ft_strchr](#ft_strchr) Function returns a pointer to the first occurrence of the character c in the string s.
-Return value: Pointer to the matched character or NULL if the character is not found. The terminating null byte is considered part of the string, so that if c is specified as '\0', these functions return a pointer to the terminator.
-- [ft_strrchr](#ft_strrchr) Function returns a pointer to the last occurrence of the caracter c in the string s.
-Return Values: Pointer to the matched character or NULL if the character is not found. The terminating null byte is considered part of the string, so that if c is specified as '\0', these functions return a pointer to the terminator.
-- [ft_strncmp](#ft_strncmp) Function compares the first (at most) n bytes of s1 and s2. The locale is not taken into account. The comparison is done using unsigned characters. Return value: Function return an integer less than, equal to, or greater than zero if s1 (or the first n bytes thereof) is found, respectively, to be less than, to match, or be greater than s2.
-- [ft_memchr](#ft_memchr) The function scans the initial n bytes of the memory area pointed to by s for the first instance of c. Both c and the bytes of the memory area pointed to by s are interpreted as unsigned char. Return value: Pointer to matching type to the matching byte or NULL of the character does not occur in the given memory area.
-- [ft_memcmp](#ft_memcmp) Function compares the first n bytes (each interpreted as unsigned char) of the memory areas s1 and s2. Return value: Function returns an integer less than, equal to, or than greater zero if the first n bytes of s1 is found, respectively, to be less than, to match, or be greater than the first n bytes of s2. For a non-zero return value, the sign is determined by the sign of the difference between the first pair of bytes (interpreted as unsigned char) that differ is s1 and s2. If n is zero, the return value is zero.
-- [ft_strnstr](#ft_strnstr) Function locates the first occurrence of the null-terminated string little in the string big, where not more than len characters are searched. Characters that appear after a '\0' character are not searched. Return value: If little is an empty string, big is returned; if little occurs nowhere in big, NULL is returned; otherwise a pointer to the first character of the first occurrence of little is returned.
-- [ft_atoi](#ft_atoi) Converts the initial portion of the string pointed to by nptr to int. Return value: Converted Value or 0 on error.
+- [ft_isalpha](#ft_isalpha) Verifica se há um caractere alfabético; no idioma padrão "C", é equivalente a (isupper || islower(c)).
+- [ft_isdigit](#ft_isdigit) Verifica se há um dígito (0 a 9).
+- [ft_isalnum](#ft_isalnum) Verifica se há um caractere alfabético; é equivalente a (isalpha(c) || ​​isdigit(c)).
+- [ft_isascii](#ft_isascii) Verifica se c é um valor unsigned char de 7 bits que se enquadra no conjunto de caracteres ASCII.
+- [ft_isprint](#ft_isprint) Verifica se há algum caractere imprimível, exceto espaço.
+- [ft_strlen](#ft_strlen) A função calcula o comprimento da string apontada por s, excluindo o byte nulo final ('\0'). Valor de retorno: A função retorna o número de bytes na string apontada por s.
+- [ft_memset](#ft_memset) A função preenche os primeiros n bytes da área de memória apontada por s, com o byte constante c.
+Valor de retorno: A função retorna um ponteiro para a área de memória s.
+- [ft_bzero](#ft_bzero) Apaga os dados nos n bytes da memória, começando no local apontado por s, escrevendo zeros (bytes contendo '\0') nessa área. Valor de retorno: Nenhum.
+- [ft_memcpy](#ft_memcpy) A função copia n bytes da área de memória src para a área de memória dest. As áreas de memória não devem se sobrepor. Use memmove se as áreas de memória se sobrepuserem. Valor de retorno: Ponteiro para dest.
+- [ft_memmove](#ft_memmove) A função copia n bytes da área de memória src para a área de memória dest. As áreas de memória podem se sobrepor: a cópia ocorre como se os bytes em src fossem primeiro copiados para um array temporário que não se sobrepõe a src ou dest, e então os bytes são copiados do array temporário para dest. Valor de retorno: A função retorna um ponteiro para dest.
+- [ft_strlcpy](#ft_strlcpy) A função copia strings de até tamanho - 1 caractere da string terminada em NUL src para dst. Garante que o resultado seja terminado em NUL (desde que tamanho seja maior que 0). Observe que um byte para o NUL deve ser incluído em tamanho. Opera somente com strings "C" verdadeiras. Isso significa que src deve ser terminado em NUL. Valor de retorno: O comprimento de src (size_t).
+- [ft_strlcat](#ft_strlcat) A função anexa a string terminada em NUL src ao final de dst. Acrescentará no máximo size - strlen(dst) - 1 bytes. Garante a terminação em NUL do resultado (desde que size seja maior que 0 e desde que haja pelo menos um byte livre em dst). Observe que um byte para o NUL deve ser incluído em size. Opera apenas em strings "C" verdadeiras. Isso significa que src e dst devem ser terminadas em NUL. Valores de retorno: Para concatenação bem-sucedida: size_t src + dst.
+- [ft_toupper](#ft_toupper) Se c for uma letra minúscula, retorna seu equivalente em maiúscula, se existir uma representação em maiúscula na localidade atual. Caso contrário, retorna c.
+- [ft_tolower](#ft_tolower) Se c for uma letra maiúscula, retorna seu equivalente em minúscula, se existir uma representação em minúscula na localidade atual. Caso contrário, retorna c.
+- [ft_strchr](#ft_strchr) A função retorna um ponteiro para a primeira ocorrência do caractere c na string s.
+Valor de retorno: Ponteiro para o caractere correspondente ou NULL se o caractere não for encontrado. O byte nulo final é considerado parte da string, de modo que, se c for especificado como '\0', essas funções retornam um ponteiro para o terminador.
+- [ft_strrchr](#ft_strrchr) A função retorna um ponteiro para a última ocorrência do caractere c na string s.
+Valores de Retorno: Ponteiro para o caractere encontrado ou NULL se o caractere não for encontrado. O byte nulo final é considerado parte da string, de modo que, se c for especificado como '\0', essas funções retornam um ponteiro para o terminador.
+- [ft_strncmp](#ft_strncmp) A função compara os primeiros (no máximo) n bytes de s1 e s2. A localidade não é levada em consideração. A comparação é feita usando caracteres sem sinal. Valor de Retorno: A função retorna um inteiro menor que, igual a ou maior que zero se s1 (ou os primeiros n bytes dele) for encontrado, respectivamente, menor que, igual a ou maior que s2. - [ft_memchr](#ft_memchr) A função varre os n bytes iniciais da área de memória apontada por s em busca da primeira instância de c. Tanto c quanto os bytes da área de memória apontada por s são interpretados como unsigned char. Valor de retorno: Ponteiro para o tipo correspondente ao byte correspondente, caso contrário, o caractere NULL não ocorre na área de memória fornecida.
+- [ft_memcmp](#ft_memcmp) A função compara os primeiros n bytes (cada um interpretado como unsigned char) das áreas de memória s1 e s2. Valor de retorno: A função retorna um inteiro menor que, igual a ou maior que zero se os primeiros n bytes de s1 forem, respectivamente, menores que, iguais ou maiores que os primeiros n bytes de s2. Para um valor de retorno diferente de zero, o sinal é determinado pelo sinal da diferença entre o primeiro par de bytes (interpretado como unsigned char) que diferem em s1 e s2. Se n for zero, o valor de retorno será zero.- [ft_strnstr](#ft_strnstr) Function locates the first occurrence of the null-terminated string little in the string big, where not more than len characters are searched. Characters that appear after a '\0' character are not searched. Return value: If little is an empty string, big is returned; if little occurs nowhere in big, NULL is returned; otherwise a pointer to the first character of the first occurrence of little is returned.
+- [ft_atoi](#ft_atoi) Converte a parte inicial da string apontada por nptr para int. Valor de retorno: Valor Convertido ou 0 em caso de erro.
 
 ### ---------- MALLOC() ----------
 
-- [ft_calloc](#ft_calloc) The calloc() function in C is used for dynamic memory allocation, specifically designed to allocate memory for an array of elements. It differs from malloc() primarily in two key aspects: Initialization to Zero: calloc() initializes all bytes of the allocated memory block to zero. This is a crucial feature, particularly when working with data structures where initial zero values are expected or required. In contrast, malloc() does not initialize the allocated memory, leaving its contents indeterminate (often referred to as "garbage values"). 
-- [ft_strdup](#ft_strdup) Its purpose is to duplicate a given string by allocating new memory for the copy and then copying the contents of the original string into this newly allocated space.
+- ​​[ft_calloc](#ft_calloc) A função calloc() em C é usada para alocação dinâmica de memória, projetada especificamente para alocar memória para um array de elementos. Ela difere de malloc() principalmente em dois aspectos principais: Inicialização com Zero: calloc() inicializa todos os bytes do bloco de memória alocado com zero. Este é um recurso crucial, particularmente ao trabalhar com estruturas de dados onde valores iniciais zero são esperados ou obrigatórios. Em contraste, malloc() não inicializa a memória alocada, deixando seu conteúdo indeterminado (frequentemente chamado de "valores lixo").
+- [ft_strdup](#ft_strdup) Seu objetivo é duplicar uma determinada string alocando nova memória para a cópia e, em seguida, copiando o conteúdo da string original para esse espaço recém-alocado.
 
 ### ---------- Extra Functions ----------
 
-- [ft_substr](#ft_substr) Allocates memory (using malloc(3)) and returns a substring from the string ’s’. The substring starts at index ’start’ and has a maximum length of ’len’.
-- [ft_strjoin](#ft_strjoin) Allocates memory (using malloc(3)) and returns a new string, which is the result of concatenating ’s1’ and ’s2’.
-- [ft_strtrin](#ft_strtrim) Allocates memory (using malloc(3)) and returns a copy of ’s1’ with characters from ’set’ removed from the beginning and the end.
-- [ft_split](#ft_split) Allocates memory (using malloc(3)) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. The array must end with a NULL pointer.
-- [ft_itoa](#ft_itoa) Allocates memory (using malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled.
-- [ft_strmapi](#ft_strmapi) Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second. A new string is created (using malloc(3)) to store the results from the successive applications of f.
-- [ft_striteri](#ft_striteri) Applies the function ’f’ to each character of the string passed as argument, passing its index as the first argument. Each character is passed by address to ’f’ so it can be modified if necessary.
-- [ft_putchar_fd](#ft_putchar_fd) Outputs the character ’c’ to the specified file descriptor.
-- [ft_putstr_fd](#ft_putstr_fd) Outputs the string ’s’ to the specified file descriptor.
-- [ft_putendl_fd](#ft_putendl_fd) Outputs the string ’s’ to the specified file descriptor followed by a newline.
-- [ft_putnbr_fd](#ft_putnbr_fd) Outputs the integer ’n’ to the specified file descriptor.
+- [ft_substr](#ft_substr) Aloca memória (usando malloc(3)) e retorna uma substring da string 's'. A substring começa no índice 'start' e tem um comprimento máximo de 'len'.
+- [ft_strjoin](#ft_strjoin) Aloca memória (usando malloc(3)) e retorna uma nova string, que é o resultado da concatenação de 's1' e 's2'.
+- [ft_strtrin](#ft_strtrim) Aloca memória (usando malloc(3)) e retorna uma cópia de 's1' com os caracteres de 'set' removidos do início e do fim.
+- [ft_split](#ft_split) Aloca memória (usando malloc(3)) e retorna um array de strings obtido pela divisão de 's' usando o caractere 'c' como delimitador. O array deve terminar com um ponteiro NULL.
+- [ft_itoa](#ft_itoa) Aloca memória (usando malloc(3)) e retorna uma string representando o inteiro recebido como argumento. Números negativos devem ser tratados.
+- [ft_strmapi](#ft_strmapi) Aplica a função f a cada caractere da string s, passando seu índice como primeiro argumento e o próprio caractere como segundo. Uma nova string é criada (usando malloc(3)) para armazenar os resultados das aplicações sucessivas de f.
+- [ft_striteri](#ft_striteri) Aplica a função 'f' a cada caractere da string passada como argumento, passando seu índice como primeiro argumento. Cada caractere é passado por endereço para 'f' para que possa ser modificado, se necessário.
+- [ft_putchar_fd](#ft_putchar_fd) Gera o caractere 'c' para o descritor de arquivo especificado.
+- [ft_putstr_fd](#ft_putstr_fd) Exibe a string 's' para o descritor de arquivo especificado.
+- [ft_putendl_fd](#ft_putendl_fd) Exibe a string 's' para o descritor de arquivo especificado, seguida por uma quebra de linha.
+- [ft_putnbr_fd](#ft_putnbr_fd) Exibe o inteiro 'n' para o descritor de arquivo especificado.
 
 ### ---------- Bonus Functions ----------
 
@@ -55,15 +53,15 @@ Return Values: Pointer to the matched character or NULL if the character is not 
 		struct s_list	*next;
 	}		t_list;
 
-- [ft_lstnew](#ft_lstnew) Allocates memory (using malloc(3)) and returns a new node. The ’content’ member variable is initialized with the given parameter ’content’. The variable ’next’ is initialized to NULL.
-- [ft_lstadd_front](#ft_lstadd_front) Adds the node ’new’ at the beginning of the list. 
-- [ft_lstsize](#ft_lstsize)Counts the number of nodes in the list.
-- [ft_lstlast](#ft_lstlast) Returns the last node of the list.
-- [ft_lstadd_back](#ft_lstadd_back) Adds the node ’new’ at the end of the list.
-- [ft_lstdelone](#ft_lstdelone) Takes a node as parameter and frees its content using the function ’del’. Free the node itself but does NOT free the next node. 
-- [ft_lstclear](#ft_lstclear) Deletes and frees the given node and all its successors, using the function ’del’ and free(3). Finally, set the pointer to the list to NULL.
-- [ft_lstiter](#ft_lstiter) Iterates through the list ’lst’ and applies the function ’f’ to the content of each node.
-- [ft_lstmap](#ft_lstmap) Iterates through the list ’lst’, applies the function ’f’ to each node’s content, and creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed.
+- [ft_lstnew](#ft_lstnew) Aloca memória (usando malloc(3)) e retorna um novo nó. A variável membro 'content' é inicializada com o parâmetro fornecido 'content'. A variável 'next' é inicializada com NULL.
+- [ft_lstadd_front](#ft_lstadd_front) Adiciona o nó 'new' ao início da lista.
+- [ft_lstsize](#ft_lstsize) Conta o número de nós na lista.
+- [ft_lstlast](#ft_lstlast) Retorna o último nó da lista.
+- [ft_lstadd_back](#ft_lstadd_back) Adiciona o nó 'new' ao final da lista.
+- [ft_lstdelone](#ft_lstdelone) Recebe um nó como parâmetro e libera seu conteúdo usando a função 'del'. Libera o nó em si, mas NÃO libera o próximo nó.
+- [ft_lstclear](#ft_lstclear) Exclui e libera o nó fornecido e todos os seus sucessores, usando a função 'del' e free(3). Por fim, define o ponteiro para a lista como NULL.
+- [ft_lstiter](#ft_lstiter) Itera pela lista 'lst' e aplica a função 'f' ao conteúdo de cada nó.
+- [ft_lstmap](#ft_lstmap) Itera pela lista 'lst', aplica a função 'f' ao conteúdo de cada nó e cria uma nova lista resultante das aplicações sucessivas da função 'f'. A função 'del' é usada para excluir o conteúdo de um nó, se necessário.
 
 ### ---------- Testes  ----------
 
