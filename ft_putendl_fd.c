@@ -6,7 +6,7 @@
 /*   By: lshiguey <lshiguey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 22:36:58 by lshiguey          #+#    #+#             */
-/*   Updated: 2025/08/25 22:32:54 by lshiguey         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:09:25 by lshiguey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putendl_fd(char *s, int fd)
 	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	ft_putchar_fd('\n', fd);
 }
